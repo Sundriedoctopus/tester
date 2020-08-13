@@ -6,7 +6,7 @@
 
 
 <script>
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
   setRandomColor();
 });
 
@@ -23,6 +23,6 @@ function getRandomColor() {
 
 
 function setRandomColor() {
-  $("#colorpad").css("background-color", getRandomColor());
+  jQuery("#colorpad").css("background-color", getRandomColor());
 }
 </script>
