@@ -1,0 +1,30 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://assets.what3words.com/sdk/v3/what3words.js?key=K0W24HHZ"></script>
+
+
+<script>
+	
+	// ?lat=51.7991725&lng=-0.8053392
+
+	var lng = getUrlParameter('lng');
+	var lat = getUrlParameter('lat');
+	
+	function getUrlParameter(name) {
+	    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+	    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+	    var results = regex.exec(location.search);
+	    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+	};
+	
+	jQuery(document).ready(function(){
+		// alert(lng + " " + lat);
+	});
+
+    what3words.api.convertTo3wa({lat:lat, lng:lng}).then(function(response) {
+        // console.log("[convertTo3wa]", response);
+        // console.log(response.words);
+        
+        document.write(response.words);
+    });
+
+</script>
