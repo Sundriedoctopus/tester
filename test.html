@@ -1,7 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<div id="colorpad" style="width:300px;height:300px;background-color:#000">
 
-</div>
 <button onclick="setRandomColor()">Random Color</button>
 
 
@@ -23,6 +21,6 @@ function getRandomColor() {
 
 
 function setRandomColor() {
-  jQuery("#colorpad").css("background-color", getRandomColor());
+  jQuery("body").append('#'+getRandomColor());
 }
 </script>
