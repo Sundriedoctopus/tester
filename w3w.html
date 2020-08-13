@@ -5,7 +5,8 @@
 <script>
 jQuery(document).ready(function(){
     what3words.api.convertTo3wa({lat:51.508344, lng:-0.12549900}).then(function(response) {
-        jQuery("body").text("[convertTo3wa]", response);
+        // jQuery("body").text("[convertTo3wa]", response);
+        console.log("[convertTo3wa]", response);
     });
 });
 </script>
