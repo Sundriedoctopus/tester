@@ -1,8 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<button onclick="setRandomColor()">Random Color</button>
-
-
 <script>
 jQuery(document).ready(function($){
   setRandomColor();
@@ -21,6 +18,6 @@ function getRandomColor() {
 
 
 function setRandomColor() {
-  jQuery("body").append('#'+getRandomColor());
+  jQuery("body").html(getRandomColor());
 }
 </script>
